@@ -80,17 +80,29 @@ console.log(matchWinner('Salgueiro', 0, 'Sport', 0));
 
 ○ Se quantidade > 10 o desconto será de 5% */
 
-const product = {
-    nome: 'Celular',
-    quantidade: 2,
-    precoUnitario: 1500
+function infoPrice(nameProduct, quantity, unityPrice){
+    let total = quantity * unityPrice;
+
+    if (quantity <= 5) {
+        let discount = total * (2 / 100);
+        let totalToPay = total - discount; 
+
+        return {nameProduct, quantity, unityPrice, total, discount, totalToPay}
+    }
+    else if (quantity > 5 && quantity <= 10){
+        let discount = total * (3 / 100);
+        let totalToPay = total - discount; 
+
+        return {nameProduct, quantity, unityPrice, total, discount, totalToPay}
+    }
+    else {
+        let discount = total * (5 / 100);
+        let totalToPay = total - discount; 
+
+        return {nameProduct, quantity, unityPrice, total, discount, totalToPay}
+    }
 }
 
-function price(infoProduct) {
-    const total = infoProduct.quantidade * infoProduct.precoUnitario;
-    const totalWDiscount = total - discount;
-    const twoPercent = 2 / 100;
-    const threePercent = 3 / 100;
-    const fivePercent = 5 / 100;
-
-}
+console.log(infoPrice('Celular', 2, 1000))
+console.log(infoPrice('Celular', 11, 1000))
+console.log(infoPrice('Celular', 6, 1000))
