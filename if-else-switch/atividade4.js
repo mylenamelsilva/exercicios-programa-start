@@ -7,13 +7,16 @@
 ● Qualquer valor diferente, o cliente não tem desconto. */
 
 function discount(quantity) {
-    if (quantity == 50) {
-        return `Você tem desconto de 5%`;
-    }
-    if (quantity == 100) {
-        return `Você tem desconto de 10%`;
-    } else {
-        return `Você não tem desconto`;
+    switch(quantity){
+        case 50:
+            return `Você tem desconto de 5%`;
+            break;
+        case 100:
+            return `Você tem desconto de 10%`;
+            break;
+        default:
+            return `Você não tem desconto`;
+            break;
     }
 }
 
@@ -33,16 +36,20 @@ console.log(discount(100));
 ●        Qualquer idade diferente, dizer que procure o INSS. */
 
 function verifyAge(age) {
-    if (age == 65) {
-        return `Você pode se aposentar por idade`
-    }
-    if (age == 50) {
-        return `Faltam 15 anos para se aposentar por idade`
-    }
-    if (age == 35) {
-        return `Faltam 30 anos para se aposentar por idade`
-    } else {
-        return `Procure o INSS`
+    switch(age) {
+        case 65:
+            return `Você pode se aposentar por idade`;
+            break;
+        case 50:
+            return `Faltam 15 anos para se aposentar por idade`;
+            break;
+        case 35:
+            return `Faltam 30 anos para se aposentar por idade`;
+            break;
+        default:
+            return `Procure o INSS`;
+            break;
+
     }
 }
 
