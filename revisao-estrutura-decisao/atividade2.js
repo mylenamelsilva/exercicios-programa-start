@@ -43,7 +43,60 @@ console.log(mediaFinal(2, 2));
 
 ●        Caso contrário, imprima o valor resultante do quadrado do segundo número. */
 
- 
+function calcularQuadrado(primeiroNumero, segundoNumero) {
+    const quadrado = [Math.pow(primeiroNumero, 2), Math.pow(segundoNumero, 2)];
+    
+    if (quadrado[0] >= 1000) {
+        return quadrado[0]
+    } else {
+        return quadrado[1]
+    }
+}
 
+console.log(calcularQuadrado(50, 6));
+console.log(calcularQuadrado(6, 2));
 
-/* 3)      Faça uma função que recebe o código de um determinado produto e mostre a sua classificação: */
+/* 3)      Faça uma função que recebe o código de um determinado produto e mostre a sua classificação:
+
+1: alimento não-perecível
+2, 3 ou 4: alimento perecível
+5 ou 6: vestuário
+7: higiene pessoal
+8, 9 ou 10: utensílioos domésticos
+qualquer outro código: código inválido     */
+
+function classificacaoProduto(codigo) {
+    switch (codigo) {
+        case 1:
+            return `Alimento não perecível`;
+            break;
+        case 2:
+        case 3:
+        case 4:
+            return `Alimento perecível`;
+            break;
+        case 5:
+        case 6:
+            return `Vestuário`;
+            break;
+        case 7:
+            return `Higiene pessoal`;
+            break;
+        case 8:
+        case 9:
+        case 10:
+            return `Utensílios domésticos`;
+            break;
+        default:
+            return `Código inválido`;
+            break;
+    }
+}
+
+console.log(classificacaoProduto(6));
+console.log(classificacaoProduto(2));
+console.log(classificacaoProduto(10));
+console.log(classificacaoProduto(98));
+console.log(classificacaoProduto(7));
+console.log(classificacaoProduto(1));
+
