@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+body {
+  background-image: url(https://i.pinimg.com/736x/2a/a3/9a/2aa39a7c6b90c1e2a747c31f1e21824e--old-letters-digital-scrapbooking.jpg);
+}
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+}
+
+h2 {
+  font-family: 'Amatic SC', cursive;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+}
+#carta {
+  font-family: 'Caveat', cursive;
+  font-size: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+span {
+  display: block;
+  margin-bottom: 2rem;
+}
