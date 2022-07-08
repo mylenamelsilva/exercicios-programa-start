@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=B612+Mono:wght@400;700&display=swap');
+
+:root {
+  --color-base: rgba(118, 30, 126, 0.736);
+  --font-base: 'B612 Mono', monospace;
+}
+
+
+body {
+  background-color: var(--color-base);
+}
+
+main {
+  background-color: white;
+  width: 70%;
+  margin: 0 auto;
+  padding: 2rem;
+  box-shadow: 10px 5px 5px var(--color-base);
+
+}
+#title, #infos{
+  display: flex;
+  justify-content: center;
+}
+#title {
+  font-family: var(--font-base);
+}
+#infos {
+  margin-top: 3rem;
+  gap: 6rem;
+}
+#generos, #perfil {
+  margin: 1rem 0 0 6rem;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-base);
+}
+input[type="text"],input[type="tel"]{
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid var(--color-base);
+  outline: none;
+  font-family: var(--font-base);
+}
+input[type="radio"]{
+  cursor: pointer;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  outline: none;
+  border: 2px solid var(--color-base);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+input[type="radio"]:before {
+  content: '';
+  position: absolute;
+  height: 18px;
+  width: 18px;
+  background: var(--color-base);
+  border-radius: 100%;
+  opacity: 0;
+}
+input[type="radio"]:checked:before {
+  opacity: 1;
+}
+#perfil{
+  display: flex;
+  flex-direction: row;
+  gap: 6rem;
+}
+#preview {
+  margin-top: 0.5rem;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 4px solid var(--color-base);
+  display: flex;
