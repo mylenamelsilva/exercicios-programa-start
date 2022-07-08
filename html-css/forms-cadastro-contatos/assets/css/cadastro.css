@@ -14,7 +14,7 @@ main {
   background-color: white;
   width: 70%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0.5rem;
   box-shadow: 10px 5px 5px var(--color-base);
 
 }
@@ -79,3 +79,24 @@ input[type="radio"]:checked:before {
   border-radius: 50%;
   border: 4px solid var(--color-base);
   display: flex;
+}
+#btn {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+input[type="submit"]{
+  cursor: pointer;
+  padding: 0.5rem 2rem;
+  margin-top: 0.5rem;
+  border: none;
+  background-color: var(--color-base);
+  color: white;
+  font-family: var(--font-base);
+  box-shadow: 2px 1px 1px var(--color-base);
+}
+input[type="submit"]:checked {
+  background-color: white;
+  color: var(--color-base);
+  box-shadow: 2px 1px 1px white;
+}
